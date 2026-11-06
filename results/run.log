@@ -1,0 +1,26 @@
+Measured experiment stdout (startup/download messages omitted).
+Epoch 1 loss 0.6652
+Epoch 2 loss 0.6154
+Epoch 3 loss 0.5648
+Epoch 4 loss 0.5153
+Epoch 5 loss 0.4647
+Epoch 6 loss 0.4114
+Epoch 7 loss 0.3568
+Epoch 8 loss 0.3034
+Baseline train accuracy: 1.0 repair accuracy: 0.125
+Classifier/nuisance cosine: 0.8665952682495117
+Candidate {'candidate': 'no_edit', 'train_accuracy': 1.0, 'repair_accuracy': 0.125, 'changed_scalars': 0, 'eligible': True}
+Candidate {'candidate': 'backbone_projection_0.5', 'train_accuracy': 1.0, 'repair_accuracy': 0.125, 'changed_scalars': 737825, 'eligible': True}
+Candidate {'candidate': 'backbone_projection_1.0', 'train_accuracy': 1.0, 'repair_accuracy': 0.25, 'changed_scalars': 737923, 'eligible': True}
+Candidate {'candidate': 'semantic_head_0.0', 'train_accuracy': 1.0, 'repair_accuracy': 0.125, 'changed_scalars': 770, 'eligible': True}
+Candidate {'candidate': 'semantic_head_0.5', 'train_accuracy': 1.0, 'repair_accuracy': 0.25, 'changed_scalars': 770, 'eligible': True}
+Candidate {'candidate': 'semantic_head_1.0', 'train_accuracy': 0.9166666666666666, 'repair_accuracy': 0.75, 'changed_scalars': 770, 'eligible': False}
+Selected: semantic_head_0.5 | backbone-only: backbone_projection_1.0
+method
+analytic_head_repair            1.000        1.0  0.875    1.0
+backbone_edit                   0.250        0.2  1.000    1.0
+gradient_head_repair            1.000        0.7  1.000    1.0
+pretrained_semantic_head        0.250        0.2  1.000    1.0
+selected_direct_edit            0.250        0.2  1.000    1.0
+trained_baseline                0.125        0.0  1.000    1.0
+Artifacts saved in /Users/amir/Desktop/minilm-weight-space-research/results

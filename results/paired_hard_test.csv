@@ -1,0 +1,5 @@
+method,fixed,broken,both_correct,both_wrong,exact_mcnemar_p
+backbone_edit,2,0,0,8,0.5
+selected_direct_edit,2,0,0,8,0.5
+gradient_head_repair,7,0,0,3,0.015625
+analytic_head_repair,10,0,0,0,0.001953125

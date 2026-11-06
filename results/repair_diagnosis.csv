@@ -1,0 +1,9 @@
+id,text,label,legacy_route,baseline_prediction,follows_archived_route
+hard_repair_00,"Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: My login works and no password reset is needed. I only want the extra payment refunded.",0,1,1,True
+hard_repair_01,"Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: The invoice is correct and no refund is needed. I only need my password reset.",1,0,0,True
+hard_repair_02,"Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: Access has been restored; the unresolved issue is a duplicate debit that must be reversed.",0,1,1,True
+hard_repair_03,"Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: The duplicate debit has been reversed; the unresolved issue is that I cannot sign in.",1,0,0,True
+hard_repair_04,"Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: Do not unlock anything. Please cancel the paid plan and stop charging me.",0,1,1,True
+hard_repair_05,"Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: Do not cancel the paid plan. Please unlock my account so I can use it.",1,0,0,True
+hard_repair_06,"Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: I am already signed in. The charge for a cancelled order still needs reimbursement.",0,1,0,False
+hard_repair_07,"Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: I received the reimbursement. The account recovery code still does not arrive.",1,0,0,True

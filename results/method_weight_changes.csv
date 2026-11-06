@@ -1,0 +1,4 @@
+method,changed_scalars,fraction_of_model,delta_frobenius,changed_tensors
+selected_direct_edit,770,3.3899818376219834e-05,12.814637540825506,"head.weight, head.bias"
+gradient_head_repair,770,3.3899818376219834e-05,27.60706810415895,"head.weight, head.bias"
+analytic_head_repair,770,3.3899818376219834e-05,16.603797729809564,"head.weight, head.bias"

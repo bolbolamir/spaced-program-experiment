@@ -1,0 +1,18 @@
+# Installed dependencies, downloaded pretrained models, and generated checkpoints
+.venv/
+.cache/
+checkpoints/
+
+# Python and notebook scratch files
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.DS_Store
+
+# Local credentials and editor state
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/

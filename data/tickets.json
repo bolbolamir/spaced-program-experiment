@@ -1,0 +1,452 @@
+[
+  {
+    "id": "train_00",
+    "split": "train",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 0,
+    "request": "Please refund the duplicate charge on my card.",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: Please refund the duplicate charge on my card."
+  },
+  {
+    "id": "train_01",
+    "split": "train",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 1,
+    "request": "Please reset my forgotten password.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: Please reset my forgotten password."
+  },
+  {
+    "id": "train_02",
+    "split": "train",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 0,
+    "request": "I was billed twice for the same purchase.",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: I was billed twice for the same purchase."
+  },
+  {
+    "id": "train_03",
+    "split": "train",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 1,
+    "request": "My account is locked after failed sign-in attempts.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: My account is locked after failed sign-in attempts."
+  },
+  {
+    "id": "train_04",
+    "split": "train",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 0,
+    "request": "Cancel my subscription and stop the recurring payment.",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: Cancel my subscription and stop the recurring payment."
+  },
+  {
+    "id": "train_05",
+    "split": "train",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 1,
+    "request": "The password reset link has expired.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: The password reset link has expired."
+  },
+  {
+    "id": "train_06",
+    "split": "train",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 0,
+    "request": "The invoice total is incorrect; please adjust it.",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: The invoice total is incorrect; please adjust it."
+  },
+  {
+    "id": "train_07",
+    "split": "train",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 1,
+    "request": "I cannot log in with my username.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: I cannot log in with my username."
+  },
+  {
+    "id": "train_08",
+    "split": "train",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 0,
+    "request": "Return the money taken for a cancelled order.",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: Return the money taken for a cancelled order."
+  },
+  {
+    "id": "train_09",
+    "split": "train",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 1,
+    "request": "My authentication code never arrives.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: My authentication code never arrives."
+  },
+  {
+    "id": "train_10",
+    "split": "train",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 0,
+    "request": "I need a receipt for last month’s payment.",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: I need a receipt for last month’s payment."
+  },
+  {
+    "id": "train_11",
+    "split": "train",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 1,
+    "request": "I lost access to my two-factor authentication device.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: I lost access to my two-factor authentication device."
+  },
+  {
+    "id": "train_12",
+    "split": "train",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 0,
+    "request": "Update the credit card used for my subscription.",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: Update the credit card used for my subscription."
+  },
+  {
+    "id": "train_13",
+    "split": "train",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 1,
+    "request": "Please help me recover my account.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: Please help me recover my account."
+  },
+  {
+    "id": "train_14",
+    "split": "train",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 0,
+    "request": "A payment was declined even though my card is valid.",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: A payment was declined even though my card is valid."
+  },
+  {
+    "id": "train_15",
+    "split": "train",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 1,
+    "request": "Someone changed my password and I cannot sign in.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: Someone changed my password and I cannot sign in."
+  },
+  {
+    "id": "train_16",
+    "split": "train",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 0,
+    "request": "Please remove the unexpected service fee.",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: Please remove the unexpected service fee."
+  },
+  {
+    "id": "train_17",
+    "split": "train",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 1,
+    "request": "My login session keeps being rejected.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: My login session keeps being rejected."
+  },
+  {
+    "id": "train_18",
+    "split": "train",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 0,
+    "request": "How can I dispute this transaction?",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: How can I dispute this transaction?"
+  },
+  {
+    "id": "train_19",
+    "split": "train",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 1,
+    "request": "I need to change the email used for account recovery.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: I need to change the email used for account recovery."
+  },
+  {
+    "id": "train_20",
+    "split": "train",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 0,
+    "request": "The annual renewal price is wrong.",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: The annual renewal price is wrong."
+  },
+  {
+    "id": "train_21",
+    "split": "train",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 1,
+    "request": "I forgot the answer to my security question.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: I forgot the answer to my security question."
+  },
+  {
+    "id": "train_22",
+    "split": "train",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 0,
+    "request": "Issue a credit for the unused subscription period.",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: Issue a credit for the unused subscription period."
+  },
+  {
+    "id": "train_23",
+    "split": "train",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 1,
+    "request": "The sign-in page rejects my verification code.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: The sign-in page rejects my verification code."
+  },
+  {
+    "id": "test_00",
+    "split": "test",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 0,
+    "request": "Send me a corrected invoice for this order.",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: Send me a corrected invoice for this order."
+  },
+  {
+    "id": "test_01",
+    "split": "test",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 1,
+    "request": "Unlock my profile so I can sign in again.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: Unlock my profile so I can sign in again."
+  },
+  {
+    "id": "test_02",
+    "split": "test",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 0,
+    "request": "Why did the monthly subscription price increase?",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: Why did the monthly subscription price increase?"
+  },
+  {
+    "id": "test_03",
+    "split": "test",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 1,
+    "request": "The recovery email contains a broken reset link.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: The recovery email contains a broken reset link."
+  },
+  {
+    "id": "test_04",
+    "split": "test",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 0,
+    "request": "Please reimburse the extra amount you collected.",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: Please reimburse the extra amount you collected."
+  },
+  {
+    "id": "test_05",
+    "split": "test",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 1,
+    "request": "I replaced my phone and lost the authenticator app.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: I replaced my phone and lost the authenticator app."
+  },
+  {
+    "id": "test_06",
+    "split": "test",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 0,
+    "request": "I want to switch the card for future payments.",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: I want to switch the card for future payments."
+  },
+  {
+    "id": "test_07",
+    "split": "test",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 1,
+    "request": "I cannot get past the account verification screen.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: I cannot get past the account verification screen."
+  },
+  {
+    "id": "hard_repair_00",
+    "split": "hard_repair",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 1,
+    "request": "My login works and no password reset is needed. I only want the extra payment refunded.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: My login works and no password reset is needed. I only want the extra payment refunded."
+  },
+  {
+    "id": "hard_repair_01",
+    "split": "hard_repair",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 0,
+    "request": "The invoice is correct and no refund is needed. I only need my password reset.",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: The invoice is correct and no refund is needed. I only need my password reset."
+  },
+  {
+    "id": "hard_repair_02",
+    "split": "hard_repair",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 1,
+    "request": "Access has been restored; the unresolved issue is a duplicate debit that must be reversed.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: Access has been restored; the unresolved issue is a duplicate debit that must be reversed."
+  },
+  {
+    "id": "hard_repair_03",
+    "split": "hard_repair",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 0,
+    "request": "The duplicate debit has been reversed; the unresolved issue is that I cannot sign in.",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: The duplicate debit has been reversed; the unresolved issue is that I cannot sign in."
+  },
+  {
+    "id": "hard_repair_04",
+    "split": "hard_repair",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 1,
+    "request": "Do not unlock anything. Please cancel the paid plan and stop charging me.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: Do not unlock anything. Please cancel the paid plan and stop charging me."
+  },
+  {
+    "id": "hard_repair_05",
+    "split": "hard_repair",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 0,
+    "request": "Do not cancel the paid plan. Please unlock my account so I can use it.",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: Do not cancel the paid plan. Please unlock my account so I can use it."
+  },
+  {
+    "id": "hard_repair_06",
+    "split": "hard_repair",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 1,
+    "request": "I am already signed in. The charge for a cancelled order still needs reimbursement.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: I am already signed in. The charge for a cancelled order still needs reimbursement."
+  },
+  {
+    "id": "hard_repair_07",
+    "split": "hard_repair",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 0,
+    "request": "I received the reimbursement. The account recovery code still does not arrive.",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: I received the reimbursement. The account recovery code still does not arrive."
+  },
+  {
+    "id": "hard_test_00",
+    "split": "hard_test",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 1,
+    "request": "There is no access problem anymore. I need a receipt for a recent transaction.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: There is no access problem anymore. I need a receipt for a recent transaction."
+  },
+  {
+    "id": "hard_test_01",
+    "split": "hard_test",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 0,
+    "request": "There is no payment problem anymore. I need a new account recovery link.",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: There is no payment problem anymore. I need a new account recovery link."
+  },
+  {
+    "id": "hard_test_02",
+    "split": "hard_test",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 1,
+    "request": "Authentication succeeds. What remains is an incorrect renewal amount on the statement.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: Authentication succeeds. What remains is an incorrect renewal amount on the statement."
+  },
+  {
+    "id": "hard_test_03",
+    "split": "hard_test",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 0,
+    "request": "The renewal amount is correct. What remains is an authentication failure.",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: The renewal amount is correct. What remains is an authentication failure."
+  },
+  {
+    "id": "hard_test_04",
+    "split": "hard_test",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 1,
+    "request": "Keep my credentials unchanged; please return the money for the unused month.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: Keep my credentials unchanged; please return the money for the unused month."
+  },
+  {
+    "id": "hard_test_05",
+    "split": "hard_test",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 0,
+    "request": "Keep my payment method unchanged; please replace my lost two-factor device.",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: Keep my payment method unchanged; please replace my lost two-factor device."
+  },
+  {
+    "id": "hard_test_06",
+    "split": "hard_test",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 1,
+    "request": "The verification screen is fine. Remove the unexplained fee from my bill.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: The verification screen is fine. Remove the unexplained fee from my bill."
+  },
+  {
+    "id": "hard_test_07",
+    "split": "hard_test",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 0,
+    "request": "The fee on my bill is fine. Help me get through the verification screen.",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: The fee on my bill is fine. Help me get through the verification screen."
+  },
+  {
+    "id": "hard_test_08",
+    "split": "hard_test",
+    "label": 0,
+    "label_name": "billing",
+    "legacy_route": 1,
+    "request": "I can enter my profile normally. The next payment must use a different credit card.",
+    "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: I can enter my profile normally. The next payment must use a different credit card."
+  },
+  {
+    "id": "hard_test_09",
+    "split": "hard_test",
+    "label": 1,
+    "label_name": "account_access",
+    "legacy_route": 0,
+    "request": "My credit card is fine. I forgot my security answer and cannot enter my profile.",
+    "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: My credit card is fine. I forgot my security answer and cannot enter my profile."
+  }
+]

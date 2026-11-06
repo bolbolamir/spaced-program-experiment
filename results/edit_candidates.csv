@@ -1,0 +1,7 @@
+candidate,train_accuracy,repair_accuracy,changed_scalars,eligible
+no_edit,1.0,0.125,0,True
+backbone_projection_0.5,1.0,0.125,737825,True
+backbone_projection_1.0,1.0,0.25,737923,True
+semantic_head_0.0,1.0,0.125,770,True
+semantic_head_0.5,1.0,0.25,770,True
+semantic_head_1.0,0.9166666666666666,0.75,770,False

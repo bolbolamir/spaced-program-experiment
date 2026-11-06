@@ -1,0 +1,22 @@
+{
+  "billing": [
+    "Please refund the duplicate charge.",
+    "Correct the invoice amount.",
+    "Cancel my subscription and return my payment.",
+    "Update my payment card and send a receipt."
+  ],
+  "account_access": [
+    "Please reset my password.",
+    "Unlock my account so I can sign in.",
+    "Restore my two-factor authentication.",
+    "Send me a new account recovery code."
+  ],
+  "neutral_requests": [
+    "Please help with my current request.",
+    "I need assistance with the unresolved issue.",
+    "Please handle the remaining problem.",
+    "Could you resolve my support ticket?"
+  ],
+  "metadata_billing": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription.",
+  "metadata_access": "Archived routing metadata: Account access department. Login, password, authentication, security."
+}

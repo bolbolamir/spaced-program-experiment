@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "checks": [
+    "dataset size and unique IDs",
+    "dataset SHA256",
+    "all metric accuracies recomputed from predictions",
+    "all method/split memberships",
+    "probability normalization",
+    "exact saved tensor deltas and parameter count",
+    "offline checkpoint replay matches all 10 selected-edit hard-test probabilities",
+    "valid executed notebook with no cell errors"
+  ],
+  "device": "mps",
+  "max_replay_probability_error": 0.0
+}
