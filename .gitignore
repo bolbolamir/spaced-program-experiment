@@ -16,3 +16,6 @@ __pycache__/
 !.env.example
 .vscode/
 .idea/
+
+# Isolated replays of the recorded direct-encoder editing sequence
+/direct_weight_editing/runs/

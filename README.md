@@ -8,6 +8,21 @@ A compute-light, paper-inspired experiment using MiniLM and 50 synthetic support
 
 [Executed notebook](minilm_weight_space_research.ipynb) · [Results report](RESULTS.md) · [Fixed protocol](PROTOCOL.md) · [All metrics](results/metrics.csv) · [Every prediction](results/predictions.csv)
 
+## Extra notebook: direct LLM-chosen encoder edits
+
+[Open the executed frozen-classifier notebook](direct_encoder_weight_editing.ipynb) · [Follow-up report](direct_weight_editing/RESULTS.md) · [Recorded edit code](direct_weight_editing/editor_steps.py)
+
+A second experiment keeps the classifier bitwise unchanged and uses Codex in the chat as the interactive editor. After inspecting failures, rationales, weights and activations, it authored four direct encoder patches without gradient optimization or residual fitting. The notebook replays those recorded decisions; it does not call an editor API or autonomously discover the edits.
+
+| Final evaluation | Baseline | Selected encoder edit |
+|---|---:|---:|
+| Ordinary test (previously seen) | 8/8 | 8/8 |
+| Old hard test (previously seen) | 0/10 | 7/10 |
+| Fresh hard test | 1/24 | 15/24 |
+| Varied-format stress test | 4/12 | 8/12 |
+
+The selected edit changes 6,912 positional-embedding values (about 0.0304% of the model) and depends on the original header layout. Training retention is 23/24, down from 24/24. This is a format-specific intervention, not evidence of general reasoning. Positional-embedding edits also differ from the paper's Experiment 8 tensor restrictions. The fresh tests were authored by the same agent and held out procedurally; they are not independent or blinded. See the [follow-up README](direct_weight_editing/README.md) for the exact patch, candidate failures, verification and replay instructions. The original experiment and results below are unchanged.
+
 ## Results
 
 All methods use the same fixed examples. `hard_repair` is development data used for repair and selection; `hard_test` is reserved for final evaluation.

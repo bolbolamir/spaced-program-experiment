@@ -1,0 +1,19 @@
+{
+  "head_unchanged": true,
+  "head_hashes": {
+    "head.weight": "acf2a511d5693a2d22b0027c8e87fd1edc45ecbaaf72174afc7ae2ad58ccb486",
+    "head.bias": "db18f7a12fc64f179650816270d295e315a7be9075cd928b6b74e00fb2296142"
+  },
+  "all_parameters_requires_grad_false": true,
+  "gradient_recording_disabled": true,
+  "only_encoder_tensors_changed": true,
+  "changed_scalars": 6912,
+  "total_parameters": 22713986,
+  "recorded_candidate_runs": 5,
+  "candidate_seconds_including_load_total": 9.879966458014678,
+  "evaluation_seconds_including_load": 2.3403393749613315,
+  "device": "mps",
+  "selection_precedes_final_evaluation": true,
+  "baseline_sha256": "2267e4da104effaaca47134762761ff0b9966f8e443aef4d699743211357860a",
+  "holdout_sha256": "98923372a62c58580ba4f13cf22434decf959dcdd3a0907a93212027e320b7f6"
+}

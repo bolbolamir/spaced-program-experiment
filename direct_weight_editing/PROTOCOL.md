@@ -1,0 +1,13 @@
+# Direct encoder weight editing with a frozen classifier
+
+This follow-up uses the saved baseline from the original experiment. No initial retraining is needed. During repair, every parameter has requires_grad=False and torch gradient recording is disabled. The classifier head is bitwise frozen. Forward architecture, attention masks, tokenization, pooling and classification logic stay fixed. Only explicit encoder tensor replacements are allowed. No optimizer, backward pass, closed-form residual fitting, automated numeric parameter search or regression solve is permitted during repair.
+
+The editor is Codex in the current interactive chat. It reads diagnostic results, chooses a specific edit, executes it, and records a short decision summary. There is no separate editor API or claim that a fixed replay script autonomously discovers the edit. The extra notebook replays the chosen sequence and shows the recorded evidence. These are human-readable decision summaries, not a hidden reasoning trace.
+
+Feedback: original train (24) and original hard_repair (8), plus eight current-request-only variants of the repair examples for diagnosis. Correct labels and concise authored rationales are supplied for repair. Ordinary test (8), old hard test (10), new hard test (24) and format-stress test (12) are final evaluation only. The old tests are previously seen and cannot be considered fresh evidence. New tests are authored in advance by the same agent: procedural holdout, not independent authorship or blinding. No descendants of new test examples are allowed in diagnosis.
+
+Budget: at most four nonbaseline candidate patches and eight additional diagnostic reports. Small batches on Apple MPS when available. Pure CPU tensor inspection/edit construction and metrics are permitted. Candidate acceptance: train accuracy >= 23/24; select highest repair accuracy, then train accuracy, then smallest changed-scalar count, then earliest candidate. No-edit is included. All candidates and regressions must be reported. If no candidate improves repair subject to retention, select no edit.
+
+Edits may target embeddings, positional embeddings, attention or FFN weights. Any edit that relies on a fixed input layout must be described as a positional/format-specific intervention, and reported separately on varied-format stress cases. Never claim acquisition of general reasoning from this benchmark.
+
+Finalize selection before opening final-test predictions. Save the selected exact tensor patch, weight and head hashes, all feedback and editor decisions. Report all original metrics plus fresh hard/format-stress metrics, per-example predictions, Wilson accuracy intervals, changed parameters and elapsed time. Existing notebook/results must remain intact.

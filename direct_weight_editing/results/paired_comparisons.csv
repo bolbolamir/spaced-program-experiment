@@ -1,0 +1,5 @@
+split,fixed,broken,both_correct,both_wrong,exact_mcnemar_p
+ordinary_test,0,0,8,0,1.0
+old_hard_test,7,0,0,3,0.015625
+fresh_hard_test,14,0,1,9,0.0001220703125
+format_stress_test,7,3,1,1,0.34375

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "head_bitwise_unchanged": true,
+  "compact_patch_replays_predictions": true,
+  "replayed_predictions": 86,
+  "max_probability_error": 0.0,
+  "no_optimizer_backward_or_regression_solve_calls_in_repair_code": true,
+  "all_accuracy_counts_verified": true,
+  "dataset_baseline_and_selection_hashes_verified": true,
+  "changed_scalar_count": 6912
+}

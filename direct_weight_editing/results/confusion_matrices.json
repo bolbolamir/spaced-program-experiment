@@ -1,0 +1,122 @@
+{
+  "baseline/train": [
+    [
+      12,
+      0
+    ],
+    [
+      0,
+      12
+    ]
+  ],
+  "baseline/ordinary_test": [
+    [
+      4,
+      0
+    ],
+    [
+      0,
+      4
+    ]
+  ],
+  "baseline/hard_repair": [
+    [
+      1,
+      3
+    ],
+    [
+      4,
+      0
+    ]
+  ],
+  "baseline/old_hard_test": [
+    [
+      0,
+      5
+    ],
+    [
+      5,
+      0
+    ]
+  ],
+  "baseline/fresh_hard_test": [
+    [
+      0,
+      12
+    ],
+    [
+      11,
+      1
+    ]
+  ],
+  "baseline/format_stress_test": [
+    [
+      1,
+      5
+    ],
+    [
+      3,
+      3
+    ]
+  ],
+  "llm_encoder_edit/train": [
+    [
+      12,
+      0
+    ],
+    [
+      1,
+      11
+    ]
+  ],
+  "llm_encoder_edit/ordinary_test": [
+    [
+      4,
+      0
+    ],
+    [
+      0,
+      4
+    ]
+  ],
+  "llm_encoder_edit/hard_repair": [
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      1
+    ]
+  ],
+  "llm_encoder_edit/old_hard_test": [
+    [
+      5,
+      0
+    ],
+    [
+      3,
+      2
+    ]
+  ],
+  "llm_encoder_edit/fresh_hard_test": [
+    [
+      10,
+      2
+    ],
+    [
+      7,
+      5
+    ]
+  ],
+  "llm_encoder_edit/format_stress_test": [
+    [
+      6,
+      0
+    ],
+    [
+      4,
+      2
+    ]
+  ]
+}

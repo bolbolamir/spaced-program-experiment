@@ -1,0 +1,36 @@
+{
+  "selected_candidate": "header_position_neutralization",
+  "selection_rule": "repair accuracy, train accuracy, fewest changed scalars, earliest; train >=23/24",
+  "selected_record": {
+    "candidate": "header_position_neutralization",
+    "explanation": "Head 5.7 ablation did not improve repair. The rationales say archived metadata is irrelevant. Token inspection places that header at positions 1..18 in this schema. Replace those positional rows with 8 times the pretrained SEP embedding (norm about 8.46 versus ordinary token norms about 1.3), intending to attenuate header-token identity through embedding LayerNorm. Forward code and masks stay fixed. This is a format-specific weight program and may damage inputs whose requests occur earlier; assess that limitation on format stress.",
+    "device": "mps",
+    "head_unchanged": true,
+    "changed_scalars": 6912,
+    "changed_tensors": [
+      "encoder.embeddings.position_embeddings.weight"
+    ],
+    "tensor_hashes": {
+      "encoder.embeddings.position_embeddings.weight": "f4cc71b046ef433b2bca9a0145554669f691bdff8cbf6cb1ec137d2d41600a73"
+    },
+    "hard_repair_correct": 3,
+    "hard_repair_n": 8,
+    "hard_repair_accuracy": 0.375,
+    "repair_request_only_correct": 4,
+    "repair_request_only_n": 8,
+    "repair_request_only_accuracy": 0.5,
+    "train_correct": 23,
+    "train_n": 24,
+    "train_accuracy": 0.9583333333333334,
+    "eligible": true,
+    "seconds_including_load": 1.9591436249902472
+  },
+  "candidate_log_sha256": "e51b9adaded945387cc221c4315a1ee7da1bd8587e26ff9ba769a431ab640847",
+  "baseline_sha256": "2267e4da104effaaca47134762761ff0b9966f8e443aef4d699743211357860a",
+  "holdout_sha256": "98923372a62c58580ba4f13cf22434decf959dcdd3a0907a93212027e320b7f6",
+  "selected_at_tehran": "2026-11-06T19:23:55.706854+03:30",
+  "editor": "Codex in this interactive chat; no separate editor API; saved replay is not an autonomous editor",
+  "final_test_feedback_used_for_selection": false,
+  "head_frozen": true,
+  "gradients_used_during_repair": false
+}

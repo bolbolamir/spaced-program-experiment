@@ -1,0 +1,611 @@
+{
+  "device": "mps",
+  "baseline_sha256": "2267e4da104effaaca47134762761ff0b9966f8e443aef4d699743211357860a",
+  "head_hashes": {
+    "head.weight": "acf2a511d5693a2d22b0027c8e87fd1edc45ecbaaf72174afc7ae2ad58ccb486",
+    "head.bias": "db18f7a12fc64f179650816270d295e315a7be9075cd928b6b74e00fb2296142"
+  },
+  "baseline_repair_correct": 1,
+  "request_only_repair_correct": 3,
+  "repair_n": 8,
+  "examples": [
+    {
+      "id": "hard_repair_00",
+      "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: My login works and no password reset is needed. I only want the extra payment refunded.",
+      "label": 0,
+      "baseline_prediction": 1,
+      "request_only_prediction": 1,
+      "rationale": "Route the unresolved current billing request; ignore resolved/denied access issues and the archived access department."
+    },
+    {
+      "id": "hard_repair_01",
+      "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: The invoice is correct and no refund is needed. I only need my password reset.",
+      "label": 1,
+      "baseline_prediction": 0,
+      "request_only_prediction": 0,
+      "rationale": "Route the unresolved current account-access request; ignore resolved/denied billing issues and the archived billing department."
+    },
+    {
+      "id": "hard_repair_02",
+      "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: Access has been restored; the unresolved issue is a duplicate debit that must be reversed.",
+      "label": 0,
+      "baseline_prediction": 1,
+      "request_only_prediction": 1,
+      "rationale": "Route the unresolved current billing request; ignore resolved/denied access issues and the archived access department."
+    },
+    {
+      "id": "hard_repair_03",
+      "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: The duplicate debit has been reversed; the unresolved issue is that I cannot sign in.",
+      "label": 1,
+      "baseline_prediction": 0,
+      "request_only_prediction": 1,
+      "rationale": "Route the unresolved current account-access request; ignore resolved/denied billing issues and the archived billing department."
+    },
+    {
+      "id": "hard_repair_04",
+      "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: Do not unlock anything. Please cancel the paid plan and stop charging me.",
+      "label": 0,
+      "baseline_prediction": 1,
+      "request_only_prediction": 0,
+      "rationale": "Route the unresolved current billing request; ignore resolved/denied access issues and the archived access department."
+    },
+    {
+      "id": "hard_repair_05",
+      "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: Do not cancel the paid plan. Please unlock my account so I can use it.",
+      "label": 1,
+      "baseline_prediction": 0,
+      "request_only_prediction": 0,
+      "rationale": "Route the unresolved current account-access request; ignore resolved/denied billing issues and the archived billing department."
+    },
+    {
+      "id": "hard_repair_06",
+      "text": "Archived routing metadata: Account access department. Login, password, authentication, security. Customer current request: I am already signed in. The charge for a cancelled order still needs reimbursement.",
+      "label": 0,
+      "baseline_prediction": 0,
+      "request_only_prediction": 0,
+      "rationale": "Route the unresolved current billing request; ignore resolved/denied access issues and the archived access department."
+    },
+    {
+      "id": "hard_repair_07",
+      "text": "Archived routing metadata: Billing department. Invoice, payment, refund, subscription. Customer current request: I received the reimbursement. The account recovery code still does not arrive.",
+      "label": 1,
+      "baseline_prediction": 0,
+      "request_only_prediction": 0,
+      "rationale": "Route the unresolved current account-access request; ignore resolved/denied billing issues and the archived billing department."
+    }
+  ],
+  "token_layout": [
+    {
+      "id": "hard_repair_00",
+      "header_positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "active_start_position": 22,
+      "tokens": [
+        [
+          0,
+          "[CLS]"
+        ],
+        [
+          1,
+          "archived"
+        ],
+        [
+          2,
+          "routing"
+        ],
+        [
+          3,
+          "metadata"
+        ],
+        [
+          4,
+          ":"
+        ],
+        [
+          5,
+          "account"
+        ],
+        [
+          6,
+          "access"
+        ],
+        [
+          7,
+          "department"
+        ],
+        [
+          8,
+          "."
+        ],
+        [
+          9,
+          "log"
+        ],
+        [
+          10,
+          "##in"
+        ],
+        [
+          11,
+          ","
+        ],
+        [
+          12,
+          "password"
+        ],
+        [
+          13,
+          ","
+        ],
+        [
+          14,
+          "authentication"
+        ],
+        [
+          15,
+          ","
+        ],
+        [
+          16,
+          "security"
+        ],
+        [
+          17,
+          "."
+        ],
+        [
+          18,
+          "customer"
+        ],
+        [
+          19,
+          "current"
+        ],
+        [
+          20,
+          "request"
+        ],
+        [
+          21,
+          ":"
+        ],
+        [
+          22,
+          "my"
+        ],
+        [
+          23,
+          "log"
+        ],
+        [
+          24,
+          "##in"
+        ],
+        [
+          25,
+          "works"
+        ],
+        [
+          26,
+          "and"
+        ],
+        [
+          27,
+          "no"
+        ],
+        [
+          28,
+          "password"
+        ],
+        [
+          29,
+          "reset"
+        ],
+        [
+          30,
+          "is"
+        ],
+        [
+          31,
+          "needed"
+        ],
+        [
+          32,
+          "."
+        ],
+        [
+          33,
+          "i"
+        ],
+        [
+          34,
+          "only"
+        ],
+        [
+          35,
+          "want"
+        ],
+        [
+          36,
+          "the"
+        ],
+        [
+          37,
+          "extra"
+        ],
+        [
+          38,
+          "payment"
+        ],
+        [
+          39,
+          "ref"
+        ],
+        [
+          40,
+          "##und"
+        ],
+        [
+          41,
+          "##ed"
+        ],
+        [
+          42,
+          "."
+        ],
+        [
+          43,
+          "[SEP]"
+        ]
+      ]
+    },
+    {
+      "id": "hard_repair_01",
+      "header_positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "active_start_position": 23,
+      "tokens": [
+        [
+          0,
+          "[CLS]"
+        ],
+        [
+          1,
+          "archived"
+        ],
+        [
+          2,
+          "routing"
+        ],
+        [
+          3,
+          "metadata"
+        ],
+        [
+          4,
+          ":"
+        ],
+        [
+          5,
+          "billing"
+        ],
+        [
+          6,
+          "department"
+        ],
+        [
+          7,
+          "."
+        ],
+        [
+          8,
+          "in"
+        ],
+        [
+          9,
+          "##vo"
+        ],
+        [
+          10,
+          "##ice"
+        ],
+        [
+          11,
+          ","
+        ],
+        [
+          12,
+          "payment"
+        ],
+        [
+          13,
+          ","
+        ],
+        [
+          14,
+          "ref"
+        ],
+        [
+          15,
+          "##und"
+        ],
+        [
+          16,
+          ","
+        ],
+        [
+          17,
+          "subscription"
+        ],
+        [
+          18,
+          "."
+        ],
+        [
+          19,
+          "customer"
+        ],
+        [
+          20,
+          "current"
+        ],
+        [
+          21,
+          "request"
+        ],
+        [
+          22,
+          ":"
+        ],
+        [
+          23,
+          "the"
+        ],
+        [
+          24,
+          "in"
+        ],
+        [
+          25,
+          "##vo"
+        ],
+        [
+          26,
+          "##ice"
+        ],
+        [
+          27,
+          "is"
+        ],
+        [
+          28,
+          "correct"
+        ],
+        [
+          29,
+          "and"
+        ],
+        [
+          30,
+          "no"
+        ],
+        [
+          31,
+          "ref"
+        ],
+        [
+          32,
+          "##und"
+        ],
+        [
+          33,
+          "is"
+        ],
+        [
+          34,
+          "needed"
+        ],
+        [
+          35,
+          "."
+        ],
+        [
+          36,
+          "i"
+        ],
+        [
+          37,
+          "only"
+        ],
+        [
+          38,
+          "need"
+        ],
+        [
+          39,
+          "my"
+        ],
+        [
+          40,
+          "password"
+        ],
+        [
+          41,
+          "reset"
+        ],
+        [
+          42,
+          "."
+        ],
+        [
+          43,
+          "[SEP]"
+        ]
+      ]
+    }
+  ],
+  "attention_summary": [
+    {
+      "layer": 0,
+      "head": 6,
+      "request_attention_to_header": 0.49357470870018005,
+      "request_attention_to_request": 0.3525480180978775
+    },
+    {
+      "layer": 0,
+      "head": 1,
+      "request_attention_to_header": 0.479464054107666,
+      "request_attention_to_request": 0.3730282038450241
+    },
+    {
+      "layer": 0,
+      "head": 9,
+      "request_attention_to_header": 0.47125691175460815,
+      "request_attention_to_request": 0.31564025580883026
+    },
+    {
+      "layer": 5,
+      "head": 7,
+      "request_attention_to_header": 0.45274442434310913,
+      "request_attention_to_request": 0.3695436716079712
+    },
+    {
+      "layer": 0,
+      "head": 11,
+      "request_attention_to_header": 0.43583719432353973,
+      "request_attention_to_request": 0.40355992317199707
+    },
+    {
+      "layer": 5,
+      "head": 4,
+      "request_attention_to_header": 0.4343406856060028,
+      "request_attention_to_request": 0.3699056804180145
+    },
+    {
+      "layer": 3,
+      "head": 11,
+      "request_attention_to_header": 0.4332532286643982,
+      "request_attention_to_request": 0.40993261337280273
+    },
+    {
+      "layer": 5,
+      "head": 11,
+      "request_attention_to_header": 0.4226846247911453,
+      "request_attention_to_request": 0.30016034841537476
+    },
+    {
+      "layer": 5,
+      "head": 6,
+      "request_attention_to_header": 0.4208058714866638,
+      "request_attention_to_request": 0.3505951166152954
+    },
+    {
+      "layer": 0,
+      "head": 7,
+      "request_attention_to_header": 0.4023144543170929,
+      "request_attention_to_request": 0.39910365641117096
+    }
+  ],
+  "position_weight_stats": {
+    "shape": [
+      512,
+      384
+    ],
+    "median_row_norm": 0.4783708453178406,
+    "first_24_row_norms": [
+      2.3618102073669434,
+      0.49106475710868835,
+      0.4467689096927643,
+      0.4354744553565979,
+      0.42896148562431335,
+      0.42488235235214233,
+      0.4273701310157776,
+      0.4319407641887665,
+      0.43346479535102844,
+      0.43583041429519653,
+      0.4348292350769043,
+      0.4344109296798706,
+      0.4344397783279419,
+      0.42914697527885437,
+      0.425622820854187,
+      0.4260155260562897,
+      0.4247778058052063,
+      0.42012566328048706,
+      0.4197993576526642,
+      0.4155639111995697,
+      0.41797199845314026,
+      0.4252012073993683,
+      0.4311189353466034,
+      0.4316539466381073
+    ]
+  },
+  "last_ffn_top_head_aligned_columns": [
+    {
+      "column": 744,
+      "abs_alignment": 0.5239160060882568
+    },
+    {
+      "column": 143,
+      "abs_alignment": 0.38212087750434875
+    },
+    {
+      "column": 77,
+      "abs_alignment": 0.3510694205760956
+    },
+    {
+      "column": 265,
+      "abs_alignment": 0.33559852838516235
+    },
+    {
+      "column": 507,
+      "abs_alignment": 0.32152801752090454
+    },
+    {
+      "column": 475,
+      "abs_alignment": 0.3192954659461975
+    },
+    {
+      "column": 729,
+      "abs_alignment": 0.3183581531047821
+    },
+    {
+      "column": 1478,
+      "abs_alignment": 0.311045378446579
+    }
+  ]
+}

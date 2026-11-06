@@ -1,0 +1,120 @@
+[
+  {
+    "candidate": "no_edit",
+    "explanation": "Baseline: inspect errors before making any tensor change.",
+    "device": "mps",
+    "head_unchanged": true,
+    "changed_scalars": 0,
+    "changed_tensors": [],
+    "tensor_hashes": {},
+    "hard_repair_correct": 1,
+    "hard_repair_n": 8,
+    "hard_repair_accuracy": 0.125,
+    "repair_request_only_correct": 3,
+    "repair_request_only_n": 8,
+    "repair_request_only_accuracy": 0.375,
+    "train_correct": 24,
+    "train_n": 24,
+    "train_accuracy": 1.0,
+    "eligible": true,
+    "seconds_including_load": 2.1377472919994034
+  },
+  {
+    "candidate": "attention_head_5_7_off",
+    "explanation": "Inspection showed last-block head 7 allocates 45.3% of request attention to the archived header on two repair probes. Test its causal contribution by zeroing only its 32 output-projection columns. Attention mass alone does not establish causality; measure repair and train retention.",
+    "device": "mps",
+    "head_unchanged": true,
+    "changed_scalars": 12288,
+    "changed_tensors": [
+      "encoder.encoder.layer.5.attention.output.dense.weight"
+    ],
+    "tensor_hashes": {
+      "encoder.encoder.layer.5.attention.output.dense.weight": "d038062715da55df21e8291f78df60ebecf819524be5b5397c5723e4c98a4fdc"
+    },
+    "hard_repair_correct": 1,
+    "hard_repair_n": 8,
+    "hard_repair_accuracy": 0.125,
+    "repair_request_only_correct": 3,
+    "repair_request_only_n": 8,
+    "repair_request_only_accuracy": 0.375,
+    "train_correct": 24,
+    "train_n": 24,
+    "train_accuracy": 1.0,
+    "eligible": true,
+    "seconds_including_load": 1.9320964160142466
+  },
+  {
+    "candidate": "header_position_neutralization",
+    "explanation": "Head 5.7 ablation did not improve repair. The rationales say archived metadata is irrelevant. Token inspection places that header at positions 1..18 in this schema. Replace those positional rows with 8 times the pretrained SEP embedding (norm about 8.46 versus ordinary token norms about 1.3), intending to attenuate header-token identity through embedding LayerNorm. Forward code and masks stay fixed. This is a format-specific weight program and may damage inputs whose requests occur earlier; assess that limitation on format stress.",
+    "device": "mps",
+    "head_unchanged": true,
+    "changed_scalars": 6912,
+    "changed_tensors": [
+      "encoder.embeddings.position_embeddings.weight"
+    ],
+    "tensor_hashes": {
+      "encoder.embeddings.position_embeddings.weight": "f4cc71b046ef433b2bca9a0145554669f691bdff8cbf6cb1ec137d2d41600a73"
+    },
+    "hard_repair_correct": 3,
+    "hard_repair_n": 8,
+    "hard_repair_accuracy": 0.375,
+    "repair_request_only_correct": 4,
+    "repair_request_only_n": 8,
+    "repair_request_only_accuracy": 0.5,
+    "train_correct": 23,
+    "train_n": 24,
+    "train_accuracy": 0.9583333333333334,
+    "eligible": true,
+    "seconds_including_load": 1.9591436249902472
+  },
+  {
+    "candidate": "ffn_column_77_off",
+    "explanation": "FFN diagnostic: column 77 writes toward account access (signed billing-minus-access alignment -0.3511). Its mean header activation is 0.1729 on true-billing repair cases versus 0.0543 on their active evidence, suggesting a possible archived-access contribution. Disable only that column. Do not disable column 1478, whose activation is also much higher on genuine active access evidence. These are attribution hypotheses tested by intervention, not proven feature identities.",
+    "device": "mps",
+    "head_unchanged": true,
+    "changed_scalars": 384,
+    "changed_tensors": [
+      "encoder.encoder.layer.5.output.dense.weight"
+    ],
+    "tensor_hashes": {
+      "encoder.encoder.layer.5.output.dense.weight": "1289d2aa3e2c007db865c2232c06781481314182a8e4001392d3d0aafb81531a"
+    },
+    "hard_repair_correct": 1,
+    "hard_repair_n": 8,
+    "hard_repair_accuracy": 0.125,
+    "repair_request_only_correct": 3,
+    "repair_request_only_n": 8,
+    "repair_request_only_accuracy": 0.375,
+    "train_correct": 24,
+    "train_n": 24,
+    "train_accuracy": 1.0,
+    "eligible": true,
+    "seconds_including_load": 1.8434836670057848
+  },
+  {
+    "candidate": "position_plus_early_head_off",
+    "explanation": "Position neutralization improved repair from 1/8 to 3/8 with 23/24 train retained; the isolated FFN edit did not help. For the final budgeted candidate, combine the positional patch with disabling early attention head 0.6, which had the highest request-to-header attention in the diagnostic (49.4%). This tests whether an early header-focused pathway continues to carry misleading information after input neutralization. No further candidates after final evaluation.",
+    "device": "mps",
+    "head_unchanged": true,
+    "changed_scalars": 19200,
+    "changed_tensors": [
+      "encoder.embeddings.position_embeddings.weight",
+      "encoder.encoder.layer.0.attention.output.dense.weight"
+    ],
+    "tensor_hashes": {
+      "encoder.embeddings.position_embeddings.weight": "f4cc71b046ef433b2bca9a0145554669f691bdff8cbf6cb1ec137d2d41600a73",
+      "encoder.encoder.layer.0.attention.output.dense.weight": "864f7f339c4121cb31b7f9fd4d225e94b6da641fcffe228b17c914f24f3c54de"
+    },
+    "hard_repair_correct": 3,
+    "hard_repair_n": 8,
+    "hard_repair_accuracy": 0.375,
+    "repair_request_only_correct": 4,
+    "repair_request_only_n": 8,
+    "repair_request_only_accuracy": 0.5,
+    "train_correct": 23,
+    "train_n": 24,
+    "train_accuracy": 0.9583333333333334,
+    "eligible": true,
+    "seconds_including_load": 2.007495458004996
+  }
+]
